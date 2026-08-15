@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,14 @@
 
   <style>
     :root {
-      --black: #111111;
-      --green: #294A32;
-      --green-dark: #1F3927;
-      --green-light: #607363;
+      /* =========================
+         FILE 1 MASTER SETTINGS
+      ========================= */
+
+      --black: #171717;
+
+      --title-green: #29443A;
+      --title-green-dark: #20362E;
 
       --red: #B83A3A;
       --red-dark: #9E3030;
@@ -40,7 +45,13 @@
       display: flex;
       flex-direction: column;
 
-      font-family: Arial, Helvetica, sans-serif;
+      /* EXACTLY AS FILE 1 MASTER */
+      font-family:
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+
       color: var(--black);
       background: var(--background);
 
@@ -80,7 +91,8 @@
       display: inline-flex;
       align-items: center;
 
-      color: var(--green);
+      /* MASTER */
+      color: var(--black);
 
       background: transparent;
 
@@ -89,7 +101,7 @@
       font-size: 0.92rem;
       font-weight: 600;
 
-      letter-spacing: 0.07em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -122,17 +134,30 @@
       margin: 0 auto;
     }
 
+
+    /* =========================
+       TITLE
+       FILE 1 MASTER H1
+    ========================= */
+
     .plants-title {
       margin-bottom: 30px;
 
-      color: var(--green);
+      /* MASTER */
+      color: var(--title-green);
 
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: 1.02;
+      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+      line-height: 1;
 
       font-weight: 500;
       letter-spacing: -0.045em;
     }
+
+
+    /* =========================
+       INTRO
+       FILE 1 MASTER BODY TEXT
+    ========================= */
 
     .plants-intro {
       max-width: 650px;
@@ -140,9 +165,15 @@
 
       color: var(--black);
 
-      font-size: 1rem;
-      line-height: 1.8;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
+
+
+    /* =========================
+       NOTE
+       FILE 1 MASTER BODY TEXT
+    ========================= */
 
     .plants-note {
       max-width: 600px;
@@ -150,13 +181,14 @@
 
       color: var(--black);
 
-      font-size: 0.9rem;
-      line-height: 1.8;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
 
     /* =========================
        CONTACT
+       FILE 1 MASTER BODY TEXT
     ========================= */
 
     .plants-contact {
@@ -165,12 +197,12 @@
 
       color: var(--black);
 
-      font-size: 0.9rem;
-      line-height: 1.8;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
     .plants-contact a {
-      color: var(--green);
+      color: var(--title-green);
 
       font-weight: 600;
 
@@ -180,33 +212,49 @@
     }
 
     .plants-contact a:hover {
-      color: var(--green-dark);
+      color: var(--title-green-dark);
       text-decoration: underline;
     }
 
 
     /* =========================
-       HOME LINK
+       HOME NAVIGATION
+       Arrow outside green button
     ========================= */
 
+    .home-navigation {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 45px;
+    }
+
+    .home-arrow {
+      color: var(--title-green);
+
+      font-size: 1.1rem;
+      line-height: 1;
+
+      font-weight: 500;
+    }
+
     .home-link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
 
-      width: fit-content;
-
-      margin-top: 45px;
-
-      padding: 10px 19px;
+      margin-top: 0;
+      padding: 11px 22px;
 
       color: #ffffff;
-      background: var(--green);
+      background: var(--title-green);
 
-      border-radius: 24px;
+      border-radius: 30px;
 
       text-decoration: none;
 
+      /* MASTER NAV / BUTTON TEXT */
       font-size: 0.82rem;
       font-weight: 600;
 
@@ -217,13 +265,17 @@
 
     .home-link:hover {
       color: #ffffff;
-      background: var(--green-dark);
+      background: var(--title-green-dark);
+
+      text-decoration: none;
+
       transform: translateY(-1px);
     }
 
 
     /* =========================
        FOOTER
+       FILE 1 MASTER
     ========================= */
 
     footer {
@@ -240,7 +292,7 @@
       background: transparent;
       border: none;
 
-      color: var(--green-light);
+      color: var(--black);
 
       font-size: 0.72rem;
     }
@@ -252,7 +304,7 @@
     }
 
     .footer-links a {
-      color: var(--green-light);
+      color: var(--black);
 
       text-decoration: none;
 
@@ -260,12 +312,13 @@
     }
 
     .footer-links a:hover {
-      color: var(--green);
+      color: var(--title-green);
       text-decoration: underline;
     }
 
     .footer-dot {
       color: var(--black);
+
       font-size: 0.9rem;
       line-height: 1;
     }
@@ -290,6 +343,7 @@
 
     /* =========================
        MOBILE
+       FILE 1 MASTER
     ========================= */
 
     @media (max-width: 600px) {
@@ -304,6 +358,7 @@
       }
 
       .logo a {
+        /* MASTER */
         font-size: 0.76rem;
       }
 
@@ -312,24 +367,45 @@
       }
 
       .plants-title {
-        font-size: clamp(2.3rem, 11vw, 3.3rem);
+        /* MASTER MOBILE H1 */
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
       }
 
       .plants-intro {
-        font-size: 0.9rem;
+        /* MASTER MOBILE BODY */
+        font-size: 0.85rem;
+        line-height: 1.6;
       }
 
       .plants-note {
-        font-size: 0.84rem;
+        /* MASTER MOBILE BODY */
+        font-size: 0.85rem;
+        line-height: 1.6;
       }
 
       .plants-contact {
         margin-top: 40px;
-        font-size: 0.84rem;
+
+        /* MASTER MOBILE BODY */
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .home-navigation {
+        gap: 8px;
+
+        margin-top: 40px;
+      }
+
+      .home-arrow {
+        font-size: 1rem;
       }
 
       .home-link {
-        margin-top: 40px;
+        padding: 10px 20px;
+
+        /* MASTER */
+        font-size: 0.82rem;
       }
 
       footer {
@@ -338,7 +414,7 @@
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 8px;
+        gap: 10px;
       }
     }
   </style>
@@ -384,9 +460,16 @@
           </a>.
         </p>
 
-        <a class="home-link" href="https://moendemik.mu/">
-          ←&nbsp; Back to Home
-        </a>
+
+        <div class="home-navigation">
+
+          <span class="home-arrow">←</span>
+
+          <a class="home-link" href="https://moendemik.mu/">
+            Back to Home
+          </a>
+
+        </div>
 
       </div>
 
@@ -419,3 +502,4 @@
 
 </body>
 </html>
+```
