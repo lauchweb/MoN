@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mo Endemik | Our Plants</title>
+  <title>Mo Endemik | Nursery</title>
 
   <meta
     name="description"
@@ -13,7 +13,6 @@
 
   <style>
     :root {
-      --black: #111111;
       --green: #294A32;
       --green-dark: #1F3927;
       --green-light: #607363;
@@ -21,6 +20,7 @@
       --red: #B83A3A;
       --red-dark: #9E3030;
 
+      --black: #111111;
       --background: #fafafa;
     }
 
@@ -30,8 +30,9 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html,
+    body {
+      min-height: 100%;
     }
 
     body {
@@ -42,9 +43,9 @@
 
       font-family: Arial, Helvetica, sans-serif;
       color: var(--black);
-      background: var(--background);
-
       line-height: 1.6;
+
+      background: var(--background);
     }
 
 
@@ -61,7 +62,6 @@
       justify-content: space-between;
 
       background: transparent;
-      border: none;
 
       flex-shrink: 0;
     }
@@ -81,8 +81,6 @@
       align-items: center;
 
       color: var(--green);
-
-      background: transparent;
 
       text-decoration: none;
 
@@ -112,9 +110,6 @@
       padding: 7px 13px;
 
       color: var(--green);
-      background: transparent;
-
-      border: none;
 
       text-decoration: none;
 
@@ -162,25 +157,30 @@
 
 
     /* =========================
-       OUR PLANTS
+       NURSERY CONTENT
     ========================= */
 
-    .plants-section {
-      max-width: 1000px;
+    .nursery {
+      max-width: 1100px;
       margin: 0 auto;
 
-      padding: 105px 6% 115px;
+      padding: 70px 6% 100px;
 
       text-align: center;
     }
 
-    .plants-inner {
-      max-width: 760px;
+    .nursery-inner {
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    .plants-title {
-      margin-bottom: 28px;
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    .nursery h1 {
+      margin-bottom: 18px;
 
       color: var(--green);
 
@@ -191,81 +191,49 @@
       letter-spacing: -0.045em;
     }
 
-    .plants-intro {
-      max-width: 650px;
-      margin: 0 auto;
-
-      color: var(--black);
-
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-    .plants-note {
+    .nursery-intro {
       max-width: 600px;
-      margin: 32px auto 0;
 
-      color: var(--green-light);
-
-      font-size: 0.88rem;
-      line-height: 1.75;
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .plants-contact {
-      margin-top: 55px;
+      margin: 0 auto 80px;
 
       color: var(--black);
 
-      font-size: 0.88rem;
+      font-size: 0.95rem;
       line-height: 1.7;
     }
 
-    .plants-contact a {
-      color: var(--green);
 
-      font-weight: 600;
+    /* =========================
+       PHOTOGRAPH
+    ========================= */
 
-      text-decoration: none;
+    .nursery-image {
+      display: block;
 
-      transition: color 0.2s ease;
-    }
+      width: 100%;
+      max-width: 820px;
 
-    .plants-contact a:hover {
-      color: var(--green-dark);
-      text-decoration: underline;
+      height: auto;
+
+      margin: 0 auto;
+
+      border-radius: 3px;
     }
 
 
     /* =========================
-       HOME LINK
+       LOWER TEXT
     ========================= */
 
-    .home-link {
-      display: inline-flex;
-      align-items: center;
+    .nursery-caption {
+      max-width: 600px;
 
-      margin-top: 45px;
+      margin: 80px auto 0;
 
-      color: var(--green);
+      color: var(--black);
 
-      text-decoration: none;
-
-      font-size: 0.82rem;
-      font-weight: 600;
-
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .home-link:hover {
-      color: var(--green-dark);
-      transform: translateY(-1px);
+      font-size: 0.92rem;
+      line-height: 1.7;
     }
 
 
@@ -285,20 +253,19 @@
       justify-content: space-between;
 
       background: transparent;
-      border: none;
 
       color: var(--green-light);
 
       font-size: 0.72rem;
     }
 
-    .footer-links {
+    footer-right {
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
-    .footer-links a {
+    footer a {
       color: var(--green-light);
 
       text-decoration: none;
@@ -306,14 +273,15 @@
       transition: color 0.2s ease;
     }
 
-    .footer-links a:hover {
+    footer a:hover {
       color: var(--green);
       text-decoration: underline;
     }
 
-    .footer-dot {
+    .footer-separator {
       color: var(--black);
-      font-size: 0.9rem;
+
+      font-size: 0.95rem;
       line-height: 1;
     }
 
@@ -328,9 +296,17 @@
         height: 76px;
       }
 
-      .plants-section {
-        padding-top: 85px;
-        padding-bottom: 95px;
+      .nursery {
+        padding-top: 60px;
+        padding-bottom: 85px;
+      }
+
+      .nursery-intro {
+        margin-bottom: 65px;
+      }
+
+      .nursery-caption {
+        margin-top: 65px;
       }
     }
 
@@ -355,11 +331,12 @@
       }
 
       nav {
-        gap: 5px;
+        gap: 4px;
       }
 
       nav a {
-        padding: 6px 9px;
+        padding: 6px 8px;
+
         font-size: 0.72rem;
       }
 
@@ -367,24 +344,36 @@
         border-radius: 8px;
       }
 
-      .plants-section {
-        padding: 65px 5% 75px;
+      .nursery {
+        padding: 45px 5% 70px;
       }
 
-      .plants-title {
+      .nursery h1 {
         font-size: clamp(2.3rem, 11vw, 3.3rem);
+
+        margin-bottom: 17px;
       }
 
-      .plants-intro {
-        font-size: 0.9rem;
+      .nursery-intro {
+        max-width: 340px;
+
+        margin-bottom: 55px;
+
+        font-size: 0.88rem;
       }
 
-      .plants-note {
-        font-size: 0.82rem;
+      .nursery-image {
+        width: 100%;
+
+        border-radius: 3px;
       }
 
-      .plants-contact {
-        margin-top: 45px;
+      .nursery-caption {
+        max-width: 340px;
+
+        margin-top: 55px;
+
+        font-size: 0.86rem;
       }
 
       footer {
@@ -395,6 +384,10 @@
 
         gap: 8px;
       }
+
+      footer-right {
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -404,59 +397,41 @@
   <header>
 
     <div class="logo">
-      <a href="https://moendemik.org/">
+      <a href="https://moendemik.mu">
         Mo Endemik
       </a>
     </div>
-
-    <nav>
-      <a href="https://moendemik.org/about.html">
-        About
-      </a>
-
-      <a href="https://moendemik.mu/our-plants.html">
-        Our Plants
-      </a>
-
-      <a href="https://moendemik.org/donate.html" class="donate-link">
-        Donate
-      </a>
-    </nav>
 
   </header>
 
 
   <main>
 
-    <section class="plants-section">
+    <section class="nursery">
 
-      <div class="plants-inner">
+      <div class="nursery-inner">
 
-        <h1 class="plants-title">
-          Our Plants
+        <h1>
+          Growing Mauritius’ Native Heritage.
         </h1>
 
-        <p class="plants-intro">
-          We grow and propagate plants selected for their ability
-          to thrive in Mauritius’ climate, Our selection of native and endemic plants are suited for the local climate and conditions.
+        <p class="nursery-intro">
+          Propagation plays an important role in keeping
+          Mauritius’ native and endemic flora present,
+          protected and available for the future.
         </p>
 
-        <p class="plants-note">
-          Plants are made available periodically. If you are looking for
-            a particular plant or would like to know what is
-            currently available, please get in touch with us.
-        </p>
 
-        <p class="plants-contact">
-          To find out what is currently available,
-          <a href="mailto:plant@moendemik.mu">
-            contact us
-          </a>.
-        </p>
+        <img
+          class="nursery-image"
+          src="nursery.jpeg"
+        >
 
-        <a class="home-link" href="https://moendemik.org/">
-          ← Back to Home
-        </a>
+
+        <p class="nursery-caption">
+          Our nursery supports the propagation of plants that
+          form part of Mauritius’ unique botanical heritage.
+        </p>
 
       </div>
 
@@ -471,19 +446,21 @@
       Conservation &amp; Propagation © Mo Endemik 2025-2026
     </span>
 
-    <div class="footer-links">
+    <footer-right>
 
-      <a href="terms-of-use.html">
+        <a href="terms-of-use.html">
         Terms of Use
       </a>
 
-      <span class="footer-dot">•</span>
+      <span class="footer-separator">
+        •
+      </span>
 
       <a href="https://instagram.com/moendemik">
         Follow
       </a>
 
-    </div>
+    </footer-right>
 
   </footer>
 
