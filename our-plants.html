@@ -95,63 +95,6 @@
 
 
     /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    nav a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 7px 13px;
-
-      color: var(--green);
-      background: transparent;
-
-      border: none;
-
-      text-decoration: none;
-
-      font-size: 0.82rem;
-      font-weight: 500;
-
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--green-dark);
-      transform: translateY(-1px);
-    }
-
-
-    /* =========================
-       DONATE
-    ========================= */
-
-    nav a.donate-link {
-      color: #ffffff;
-      background: var(--red);
-
-      border-radius: 9px;
-
-      font-weight: 600;
-    }
-
-    nav a.donate-link:hover {
-      color: #ffffff;
-      background: var(--red-dark);
-    }
-
-
-    /* =========================
        MAIN
     ========================= */
 
@@ -180,7 +123,7 @@
     }
 
     .plants-title {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
 
       color: var(--green);
 
@@ -203,12 +146,12 @@
 
     .plants-note {
       max-width: 600px;
-      margin: 32px auto 0;
+      margin: 30px auto 0;
 
-      color: var(--green-light);
+      color: var(--black);
 
-      font-size: 0.88rem;
-      line-height: 1.75;
+      font-size: 0.9rem;
+      line-height: 1.8;
     }
 
 
@@ -217,12 +160,13 @@
     ========================= */
 
     .plants-contact {
-      margin-top: 55px;
+      max-width: 600px;
+      margin: 42px auto 0;
 
       color: var(--black);
 
-      font-size: 0.88rem;
-      line-height: 1.7;
+      font-size: 0.9rem;
+      line-height: 1.8;
     }
 
     .plants-contact a {
@@ -246,8 +190,10 @@
     ========================= */
 
     .home-link {
-      display: inline-flex;
+      display: flex;
       align-items: center;
+
+      width: fit-content;
 
       margin-top: 45px;
 
@@ -354,19 +300,6 @@
         font-size: 0.76rem;
       }
 
-      nav {
-        gap: 5px;
-      }
-
-      nav a {
-        padding: 6px 9px;
-        font-size: 0.72rem;
-      }
-
-      nav a.donate-link {
-        border-radius: 8px;
-      }
-
       .plants-section {
         padding: 65px 5% 75px;
       }
@@ -380,11 +313,12 @@
       }
 
       .plants-note {
-        font-size: 0.82rem;
+        font-size: 0.84rem;
       }
 
       .plants-contact {
-        margin-top: 45px;
+        margin-top: 40px;
+        font-size: 0.84rem;
       }
 
       footer {
@@ -419,21 +353,22 @@
       <div class="plants-inner">
 
         <h1 class="plants-title">
-          Our Plants
+          Native &amp; Endemic
         </h1>
 
         <p class="plants-intro">
-          We offer a selection of native and endemic plants suited
-          to Mauritius’ local climate and growing conditions.
+          Our nursery focuses on native and endemic plants that are
+          well suited to Mauritius and its local growing conditions.
         </p>
 
         <p class="plants-note">
-          Our selection changes throughout the year as plants are
-          propagated and become ready for planting.
+          Plants are propagated as part of our nursery work and
+          become available periodically as they reach a suitable
+          stage for planting.
         </p>
 
         <p class="plants-contact">
-          To find out what is currently available,
+          If you would like to know what is currently available,
           <a href="mailto:plant@moendemik.mu">
             contact us
           </a>.
