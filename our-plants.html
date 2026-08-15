@@ -1,1 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Mo Endemik | Our Plants</title>
+
+  <meta
+    name="description"
+    content="Explore Mo Endemik’s selection of native and endemic plants from Mauritius, propagated with care and made available periodically."
+  >
+
+  <style>
+    :root {
+      --black: #111111;
+      --green: #294A32;
+      --green-dark: #1F3927;
+      --green-light: #607363;
+
+      --red: #B83A3A;
+      --red-dark: #9E3030;
+
+      --background: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--black);
+      background: var(--background);
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      height: 82px;
+      padding: 0 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: transparent;
+      border: none;
+
+      flex-shrink: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo a {
+      color: var(--green);
+
+      text-decoration: none;
+
+      font-size: 0.92rem;
+      font-weight: 600;
+
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 7px 13px;
+
+      color: var(--green);
+      background: transparent;
+
+      text-decoration: none;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       DONATE
+    ========================= */
+
+    nav a.donate-link {
+      color: #ffffff;
+      background: var(--red);
+
+      border-radius: 9px;
+
+      font-weight: 600;
+    }
+
+    nav a.donate-link:hover {
+      color: #ffffff;
+      background: var(--red-dark);
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+
+    /* =========================
+       OUR PLANTS
+    ========================= */
+
+    .plants {
+      max-width: 900px;
+      margin: 0 auto;
+
+      padding: 105px 6% 110px;
+
+      text-align: center;
+    }
+
+    .plants-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .plants-label {
+      margin-bottom: 20px;
+
+      color: var(--green);
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.74rem;
+      font-weight: 600;
+
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .plants h1 {
+      margin-bottom: 28px;
+
+      color: var(--green);
+
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .plants-intro {
+      max-width: 620px;
+      margin: 0 auto;
+
+      color: var(--black);
+
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .plants-note {
+      max-width: 580px;
+
+      margin: 34px auto 0;
+
+      color: var(--black);
+
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .availability {
+      margin-top: 55px;
+    }
+
+    .availability p {
+      max-width: 540px;
+      margin: 0 auto 18px;
+
+      color: var(--black);
+
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+
+      color: var(--green);
+
+      text-decoration: none;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+
+      border-bottom: 1px solid var(--green);
+
+      padding-bottom: 2px;
+
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--green-dark);
+      border-color: var(--green-dark);
+    }
+
+
+    /* =========================
+       HOME LINK
+    ========================= */
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+
+      margin-top: 58px;
+
+      color: var(--green);
+
+      text-decoration: none;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .home-link:hover {
+      color: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      width: 100%;
+
+      flex-shrink: 0;
+
+      padding: 25px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: transparent;
+      border: none;
+
+      color: var(--green-light);
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    footer a {
+      color: var(--green-light);
+
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    .footer-separator {
+      color: var(--black);
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      header {
+        height: 76px;
+      }
+
+      .plants {
+        padding-top: 85px;
+        padding-bottom: 90px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        height: auto;
+        min-height: 72px;
+
+        padding: 14px 5%;
+
+        gap: 10px;
+      }
+
+      .logo a {
+        font-size: 0.76rem;
+      }
+
+      nav {
+        gap: 5px;
+      }
+
+      nav a {
+        padding: 6px 9px;
+
+        font-size: 0.72rem;
+      }
+
+      nav a.donate-link {
+        border-radius: 8px;
+      }
+
+      .plants {
+        padding: 65px 5% 75px;
+      }
+
+      .plants h1 {
+        font-size: clamp(2.3rem, 11vw, 3.3rem);
+      }
+
+      .plants-intro {
+        font-size: 0.94rem;
+      }
+
+      .plants-note {
+        font-size: 0.88rem;
+      }
+
+      .availability {
+        margin-top: 45px;
+      }
+
+      .home-link {
+        margin-top: 48px;
+      }
+
+      footer {
+        padding: 22px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 8px;
+      }
+
+      .footer-right {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      <a href="index.html">Mo Endemik</a>
+    </div>
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="our-plants.html">Our Plants</a>
+      <a href="donate.html" class="donate-link">Donate</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <section class="plants">
+
+      <div class="plants-inner">
+
+        <div class="plants-label">
+          Our Plants
+        </div>
+
+        <h1>
+          Native plants for our island.
+        </h1>
+
+        <p class="plants-intro">
+          The plants we propagate are selected for their connection
+          to Mauritius and their ability to thrive in the local climate.
+          They form part of the island’s natural botanical heritage.
+        </p>
+
+        <p class="plants-note">
+          Plants are made available periodically as they reach a
+          suitable stage for planting and sharing.
+        </p>
+
+
+        <div class="availability">
+
+          <p>
+            Interested in a particular plant or would like to know
+            what is currently available?
+          </p>
+
+          <a
+            class="contact-link"
+            href="mailto:plant@moendemik.mu"
+          >
+            Contact us about plant availability
+          </a>
+
+        </div>
+
+
+        <a
+          class="home-link"
+          href="index.html"
+        >
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      Conservation &amp; Propagation © Mo Endemik 2025-2026
+    </span>
+
+    <div class="footer-right">
+
+      <a href="terms-of-use.html">
+        Terms of Use
+      </a>
+
+      <span class="footer-separator">•</span>
+
+      <a
+        href="https://instagram.com/moendemik"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
