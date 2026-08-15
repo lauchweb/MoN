@@ -8,12 +8,11 @@
 
   <meta
     name="description"
-    content="Explore Mo Endemik’s selection of native and endemic plants from Mauritius, propagated with care and made available periodically."
+    content="Mo Endemik’s selection of native and endemic plants, propagated with care and made available periodically."
   >
 
   <style>
     :root {
-      --black: #111111;
       --green: #294A32;
       --green-dark: #1F3927;
       --green-light: #607363;
@@ -22,6 +21,7 @@
       --red-dark: #9E3030;
 
       --background: #fafafa;
+      --black: #111111;
     }
 
     * {
@@ -40,103 +40,11 @@
       display: flex;
       flex-direction: column;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--black);
       background: var(--background);
 
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      height: 82px;
-      padding: 0 6%;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      background: transparent;
-      border: none;
-
-      flex-shrink: 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo a {
-      color: var(--green);
-
-      text-decoration: none;
-
-      font-size: 0.92rem;
-      font-weight: 600;
-
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    nav a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 7px 13px;
-
-      color: var(--green);
-      background: transparent;
-
-      text-decoration: none;
-
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 500;
-
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--green-dark);
-      transform: translateY(-1px);
-    }
-
-
-    /* =========================
-       DONATE
-    ========================= */
-
-    nav a.donate-link {
-      color: #ffffff;
-      background: var(--red);
-
-      border-radius: 9px;
-
-      font-weight: 600;
-    }
-
-    nav a.donate-link:hover {
-      color: #ffffff;
-      background: var(--red-dark);
+      line-height: 1.6;
     }
 
 
@@ -158,7 +66,7 @@
       max-width: 900px;
       margin: 0 auto;
 
-      padding: 105px 6% 110px;
+      padding: 110px 6% 120px;
 
       text-align: center;
     }
@@ -173,11 +81,10 @@
 
       color: var(--green);
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.74rem;
+      font-size: 0.75rem;
       font-weight: 600;
 
-      letter-spacing: 0.13em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
@@ -187,7 +94,7 @@
       color: var(--green);
 
       font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 1.05;
+      line-height: 1.02;
 
       font-weight: 500;
       letter-spacing: -0.045em;
@@ -199,18 +106,26 @@
 
       color: var(--black);
 
-      font-size: 1.02rem;
+      font-size: 1rem;
       line-height: 1.8;
     }
 
-    .plants-note {
-      max-width: 580px;
 
-      margin: 34px auto 0;
+    /* =========================
+       AVAILABILITY
+    ========================= */
+
+    .availability {
+      margin-top: 70px;
+    }
+
+    .availability p {
+      max-width: 600px;
+      margin: 0 auto;
 
       color: var(--black);
 
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       line-height: 1.8;
     }
 
@@ -219,44 +134,32 @@
        CONTACT
     ========================= */
 
-    .availability {
+    .plant-contact {
       margin-top: 55px;
     }
 
-    .availability p {
-      max-width: 540px;
-      margin: 0 auto 18px;
+    .plant-contact p {
+      margin-bottom: 12px;
 
       color: var(--black);
 
-      font-size: 0.9rem;
-      line-height: 1.7;
+      font-size: 0.88rem;
     }
 
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-
+    .plant-contact a {
       color: var(--green);
 
       text-decoration: none;
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       font-weight: 600;
 
-      border-bottom: 1px solid var(--green);
-
-      padding-bottom: 2px;
-
-      transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
+      transition: color 0.2s ease;
     }
 
-    .contact-link:hover {
+    .plant-contact a:hover {
       color: var(--green-dark);
-      border-color: var(--green-dark);
+      text-decoration: underline;
     }
 
 
@@ -268,13 +171,12 @@
       display: inline-flex;
       align-items: center;
 
-      margin-top: 58px;
+      margin-top: 55px;
 
       color: var(--green);
 
       text-decoration: none;
 
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.82rem;
       font-weight: 600;
 
@@ -296,8 +198,6 @@
     footer {
       width: 100%;
 
-      flex-shrink: 0;
-
       padding: 25px 6%;
 
       display: flex;
@@ -309,14 +209,13 @@
 
       color: var(--green-light);
 
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.72rem;
     }
 
     .footer-right {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     footer a {
@@ -334,25 +233,9 @@
 
     .footer-separator {
       color: var(--black);
-      font-size: 0.9rem;
+
+      font-size: 0.8rem;
       line-height: 1;
-    }
-
-
-    /* =========================
-       TABLET
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      header {
-        height: 76px;
-      }
-
-      .plants {
-        padding-top: 85px;
-        padding-bottom: 90px;
-      }
     }
 
 
@@ -362,35 +245,8 @@
 
     @media (max-width: 600px) {
 
-      header {
-        height: auto;
-        min-height: 72px;
-
-        padding: 14px 5%;
-
-        gap: 10px;
-      }
-
-      .logo a {
-        font-size: 0.76rem;
-      }
-
-      nav {
-        gap: 5px;
-      }
-
-      nav a {
-        padding: 6px 9px;
-
-        font-size: 0.72rem;
-      }
-
-      nav a.donate-link {
-        border-radius: 8px;
-      }
-
       .plants {
-        padding: 65px 5% 75px;
+        padding: 75px 5% 90px;
       }
 
       .plants h1 {
@@ -398,19 +254,20 @@
       }
 
       .plants-intro {
-        font-size: 0.94rem;
-      }
-
-      .plants-note {
-        font-size: 0.88rem;
+        font-size: 0.92rem;
+        line-height: 1.75;
       }
 
       .availability {
-        margin-top: 45px;
+        margin-top: 55px;
       }
 
-      .home-link {
-        margin-top: 48px;
+      .availability p {
+        font-size: 0.86rem;
+      }
+
+      .plant-contact {
+        margin-top: 45px;
       }
 
       footer {
@@ -423,28 +280,14 @@
       }
 
       .footer-right {
-        gap: 10px;
+        gap: 12px;
       }
     }
   </style>
 </head>
 
+
 <body>
-
-  <header>
-
-    <div class="logo">
-      <a href="index.html">Mo Endemik</a>
-    </div>
-
-    <nav>
-      <a href="about.html">About</a>
-      <a href="our-plants.html">Our Plants</a>
-      <a href="donate.html" class="donate-link">Donate</a>
-    </nav>
-
-  </header>
-
 
   <main>
 
@@ -453,37 +296,40 @@
       <div class="plants-inner">
 
         <div class="plants-label">
-          Our Plants
+          Our plants
         </div>
 
         <h1>
-          Native plants for our island.
+          Plants suited to our island.
         </h1>
 
         <p class="plants-intro">
-          The plants we propagate are selected for their connection
-          to Mauritius and their ability to thrive in the local climate.
-          They form part of the island’s natural botanical heritage.
-        </p>
-
-        <p class="plants-note">
-          Plants are made available periodically as they reach a
-          suitable stage for planting and sharing.
+          We grow and propagate plants suited to the conditions
+          of Mauritius, with a focus on native and endemic species
+          that form part of the island’s botanical heritage.
         </p>
 
 
         <div class="availability">
 
           <p>
-            Interested in a particular plant or would like to know
-            what is currently available?
+            Our plants become available at different times
+            throughout the year. To find out what is currently
+            available, or to enquire about a particular species,
+            please contact us directly.
           </p>
 
-          <a
-            class="contact-link"
-            href="mailto:plant@moendemik.mu"
-          >
-            Contact us about plant availability
+        </div>
+
+
+        <div class="plant-contact">
+
+          <p>
+            Plant availability:
+          </p>
+
+          <a href="mailto:plant@moendemik.mu">
+            plant@moendemik.mu
           </a>
 
         </div>
@@ -517,11 +363,7 @@
 
       <span class="footer-separator">•</span>
 
-      <a
-        href="https://instagram.com/moendemik"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://instagram.com/moendemik">
         Follow
       </a>
 
