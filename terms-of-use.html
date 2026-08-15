@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,17 @@
 
   <style>
     :root {
-      --black: #111111;
-      --green: #294A32;
-      --green-dark: #1F3927;
-      --green-light: #607363;
+      /* =========================
+         FILE 1 MASTER
+      ========================= */
+
+      --black: #171717;
+
+      --title-green: #29443A;
+      --title-green-dark: #20362E;
+
+      --red: #B83A3A;
+      --red-dark: #9E3030;
 
       --background: #fafafa;
     }
@@ -37,7 +45,12 @@
       display: flex;
       flex-direction: column;
 
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+
       color: var(--black);
       background: var(--background);
 
@@ -71,33 +84,48 @@
       margin: 0 auto;
     }
 
+
+    /* =========================
+       TITLE
+    ========================= */
+
     .terms-title {
       margin-bottom: 38px;
 
-      color: var(--green);
+      color: var(--title-green);
 
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: 1.02;
+      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+      line-height: 1;
 
       font-weight: 500;
       letter-spacing: -0.045em;
     }
 
+
+    /* =========================
+       TERMS CONTENT
+    ========================= */
+
     .terms-content {
       color: var(--black);
 
-      font-size: 0.9rem;
-      line-height: 1.8;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
     .terms-content section {
       margin-bottom: 32px;
     }
 
+
+    /* =========================
+       SECTION HEADINGS
+    ========================= */
+
     .terms-content h2 {
       margin-bottom: 9px;
 
-      color: var(--green);
+      color: var(--title-green);
 
       font-size: 1rem;
       line-height: 1.3;
@@ -110,31 +138,49 @@
     }
 
     .terms-content a {
-      color: var(--green);
+      color: var(--title-green);
 
       text-decoration: none;
       font-weight: 600;
     }
 
     .terms-content a:hover {
-      color: var(--green-dark);
+      color: var(--title-green-dark);
       text-decoration: underline;
     }
 
 
     /* =========================
-       HOME BUTTON
+       HOME NAVIGATION
     ========================= */
 
-    .home-link {
+    .home-navigation {
       display: inline-flex;
       align-items: center;
+      gap: 10px;
 
       margin-top: 18px;
+    }
+
+    .home-arrow {
+      color: var(--title-green);
+
+      font-size: 1.1rem;
+      line-height: 1;
+
+      font-weight: 500;
+    }
+
+    .terms-content a.home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 0;
       padding: 11px 22px;
 
       color: #ffffff;
-      background: var(--green);
+      background: var(--title-green);
 
       border-radius: 30px;
 
@@ -148,9 +194,11 @@
         transform 0.2s ease;
     }
 
-    .home-link:hover {
+    .terms-content a.home-link:hover {
       color: #ffffff;
-      background: var(--green-dark);
+      background: var(--title-green-dark);
+      text-decoration: none;
+
       transform: translateY(-1px);
     }
 
@@ -173,7 +221,7 @@
       background: transparent;
       border: none;
 
-      color: var(--green-light);
+      color: var(--black);
 
       font-size: 0.72rem;
     }
@@ -185,7 +233,7 @@
     }
 
     .footer-links a {
-      color: var(--green-light);
+      color: var(--black);
 
       text-decoration: none;
 
@@ -193,12 +241,13 @@
     }
 
     .footer-links a:hover {
-      color: var(--green);
+      color: var(--title-green);
       text-decoration: underline;
     }
 
     .footer-dot {
       color: var(--black);
+
       font-size: 0.9rem;
       line-height: 1;
     }
@@ -228,21 +277,32 @@
       }
 
       .terms-title {
-        font-size: clamp(2.3rem, 11vw, 3.3rem);
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+
         margin-bottom: 32px;
       }
 
       .terms-content {
-        font-size: 0.84rem;
+        font-size: 0.85rem;
+        line-height: 1.6;
       }
 
       .terms-content section {
         margin-bottom: 28px;
       }
 
-      .home-link {
+      .home-navigation {
+        gap: 8px;
+      }
+
+      .home-arrow {
+        font-size: 1rem;
+      }
+
+      .terms-content a.home-link {
         padding: 10px 20px;
-        font-size: 0.8rem;
+
+        font-size: 0.82rem;
       }
 
       footer {
@@ -251,7 +311,7 @@
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 8px;
+        gap: 10px;
       }
     }
   </style>
@@ -345,9 +405,15 @@
           </section>
 
 
-          <a class="home-link" href="https://moendemik.mu/">
-            ← Back to Home
-          </a>
+          <div class="home-navigation">
+
+            <span class="home-arrow">←</span>
+
+            <a class="home-link" href="https://moendemik.mu/">
+              Back to Home
+            </a>
+
+          </div>
 
         </div>
 
@@ -382,3 +448,4 @@
 
 </body>
 </html>
+```
