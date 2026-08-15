@@ -4,133 +4,584 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mo Endemik Nursery Official Website</title>
-  <meta name="description" content="Mo Endemik Nursery Official Website">
+  <title>Mo Endemik Nursery | Native & Endemic Plants of Mauritius</title>
+
+  <meta
+    name="description"
+    content="Mo Endemik Nursery offers native and endemic plants of Mauritius, supporting the conservation and appreciation of the island's botanical heritage."
+  >
 
   <style>
-    body {
-      margin: 0;
-      background-color: #f7f7f7;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
+    :root {
+      --green: #294A32;
+      --green-dark: #1F3927;
+      --green-light: #607363;
+
+      --black: #111111;
+
+      --red: #B83A3A;
+      --red-dark: #9E3030;
+
+      --background: #fafafa;
     }
 
-    .header {
-      padding: 30px 40px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+
       display: flex;
+      flex-direction: column;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--black);
+
+      background-color: var(--background);
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      width: 100%;
+
+      height: 82px;
+
+      padding: 0 6%;
+
+      display: flex;
+      align-items: center;
       justify-content: space-between;
+
+      background: transparent;
+
+      flex-shrink: 0;
+    }
+
+
+    /* =========================
+       WEBSITE TITLE
+    ========================= */
+
+    .logo {
+      display: flex;
       align-items: center;
     }
 
-    .title-block {
+    .logo a {
+      display: inline-flex;
+      align-items: center;
+
+      color: var(--green);
+
+      background: transparent;
+
+      text-decoration: none;
+
+      font-size: 0.92rem;
+      font-weight: 600;
+
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+
+      gap: 9px;
     }
 
-    .title {
-      font-size: 34px;
-      font-weight: 700;
-      color: #123996;
-      margin: 0;
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 7px 13px;
+
+      color: var(--green);
+
+      background: transparent;
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+      font-weight: 500;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .subtitle {
-      margin: 8px 0 0 0;
-      font-size: 16px;
-      color: #555;
+    nav a:hover {
+      color: var(--green-dark);
+
+      transform: translateY(-1px);
     }
 
-    .nav {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      font-size: 24px;
-      font-weight: 400;
-      font-family: Arial, sans-serif;
+
+    /* =========================
+       DONATE BUTTON
+    ========================= */
+
+    nav a.donate-link {
+      color: #ffffff;
+
+      background: var(--red);
+
+      border-radius: 9px;
+
+      font-weight: 600;
     }
 
-    .help {
-      color: #123996;
+    nav a.donate-link:hover {
+      color: #ffffff;
+
+      background: var(--red-dark);
     }
 
-    .info,
-    .about {
-      color: #555;
-    }
 
-    .spacer {
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
       flex: 1;
+
+      width: 100%;
     }
+
+
+    /* =========================
+       NURSERY INTRO
+    ========================= */
+
+    .nursery {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding: 65px 6% 100px;
+
+      text-align: center;
+    }
+
+    .nursery-inner {
+      max-width: 850px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       PAGE TITLE
+    ========================= */
+
+    .nursery-title {
+      margin-bottom: 18px;
+
+      color: var(--green);
+
+      font-size: clamp(2.4rem, 5vw, 4rem);
+
+      line-height: 1.02;
+
+      font-weight: 500;
+
+      letter-spacing: -0.045em;
+    }
+
+    .nursery-intro {
+      max-width: 570px;
+
+      margin: 0 auto;
+
+      color: var(--black);
+
+      font-size: 0.94rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       PHOTOGRAPH
+    ========================= */
+
+    .nursery-photo {
+      margin: 55px auto 0;
+
+      max-width: 760px;
+    }
+
+    .nursery-photo img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: 4px;
+    }
+
+
+    /* =========================
+       TEXT BELOW IMAGE
+    ========================= */
+
+    .nursery-caption {
+      max-width: 560px;
+
+      margin: 38px auto 0;
+
+      color: var(--black);
+
+      font-size: 0.9rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       ABOUT LINK
+    ========================= */
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+
+      margin-top: 38px;
+
+      color: var(--green);
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+
+      font-weight: 600;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .about-link:hover {
+      color: var(--green-dark);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
+      width: 100%;
+
+      padding: 25px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       background: transparent;
+
+      color: var(--green-light);
+
+      font-size: 0.72rem;
+
+      flex-shrink: 0;
     }
 
-    .footer-pc {
-      color: #555;
-      font-weight: 400;
+    .footer-right {
+      display: flex;
+      align-items: center;
+
+      gap: 13px;
     }
 
-    .footer-me {
-      color: #123996;
-      font-weight: 700;
+    footer a {
+      color: var(--green-light);
+
+      text-decoration: none;
+
+      transition: color 0.2s ease;
     }
+
+    footer a:hover {
+      color: var(--green);
+
+      text-decoration: underline;
+    }
+
+    .footer-separator {
+      color: var(--black);
+
+      font-size: 0.85rem;
+      line-height: 1;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      header {
+        height: 76px;
+      }
+
+      .nursery {
+        padding-top: 55px;
+        padding-bottom: 80px;
+      }
+
+      .nursery-photo {
+        margin-top: 48px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 600px) {
-      .header {
-        padding: 20px;
-        align-items: center;
+
+      header {
+        height: auto;
+
+        min-height: 72px;
+
+        padding: 14px 5%;
+
+        gap: 10px;
       }
 
-      .title {
-        font-size: 26px;
+      .logo a {
+        font-size: 0.76rem;
       }
 
-      .subtitle {
-        font-size: 14px;
+      nav {
+        gap: 5px;
       }
 
-      .nav {
-        font-size: 18px;
-        gap: 20px;
+      nav a {
+        padding: 6px 9px;
+
+        font-size: 0.72rem;
+      }
+
+      nav a.donate-link {
+        border-radius: 8px;
+      }
+
+      .nursery {
+        padding: 45px 5% 65px;
+      }
+
+      .nursery-title {
+        font-size: clamp(2.3rem, 11vw, 3.3rem);
+      }
+
+      .nursery-intro {
+        max-width: 340px;
+
+        font-size: 0.86rem;
+      }
+
+      .nursery-photo {
+        margin-top: 40px;
+      }
+
+      .nursery-photo img {
+        border-radius: 3px;
+      }
+
+      .nursery-caption {
+        max-width: 340px;
+
+        margin-top: 30px;
+
+        font-size: 0.84rem;
+      }
+
+      .about-link {
+        margin-top: 32px;
+      }
+
+      footer {
+        padding: 22px 5%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 9px;
+      }
+
+      .footer-right {
+        gap: 11px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-  <div class="header">
-    <div class="title-block">
-      <h1>
-         <a href="https://moendemik.mu">Mo Endemik</a>
-      </h1>
-      
-      <p class="subtitle">No plants for sale at this time</p>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="logo">
+
+      <a href="index.html">
+        Mo Endemik
+      </a>
+
     </div>
 
-    <div class="nav">
-      <div class="help">Info</div>
-      <div class="info">Contact</div>
-      <div class="about">About</div>
-    </div>
-  </div>
 
-  <div class="spacer"></div>
+    <nav>
+
+      <a href="our-plants.html">
+        Our Plants
+      </a>
+
+      <a href="https://moendemik.org/about.html">
+        About
+      </a>
+
+      <a href="donate.html" class="donate-link">
+        Donate
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main>
+
+    <section class="nursery">
+
+      <div class="nursery-inner">
+
+
+        <h1 class="nursery-title">
+          Mo Endemik Nursery
+        </h1>
+
+
+        <p class="nursery-intro">
+          Native and endemic plants of Mauritius,
+          grown to support our island’s botanical heritage.
+        </p>
+
+
+        <!-- =========================
+             NURSERY PHOTOGRAPH
+        ========================= -->
+
+        <div class="nursery-photo">
+
+          <img
+            src="nursery.jpeg"
+            alt="Mo Endemik nursery"
+          >
+
+        </div>
+
+
+        <!-- =========================
+             SHORT DESCRIPTION
+        ========================= -->
+
+        <p class="nursery-caption">
+          Discover plants that belong to Mauritius
+          and help bring our native flora closer to home.
+        </p>
+
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <a
+          class="about-link"
+          href="https://moendemik.org/about.html"
+        >
+          About Mo Endemik →
+        </a>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+    ========================= -->
 
   <footer>
-    <span class="footer-pc">Propagation & Conservation ©</span>
-    <span class="footer-me">Mo Endemik</span>
-    <span class="footer-2026">2026</span>
-    <a href="https://instagram.com/moendemik" target="_blank" rel="noopener noreferrer">Follow</a>
-    
+
+    <span>
+      Conservation &amp; Propagation © Mo Endemik 2025-2026
+    </span>
+
+
+    <div class="footer-right">
+
+      <a href="terms-of-use.html">
+        Terms of Use
+      </a>
+
+      <span class="footer-separator">
+        •
+      </span>
+
+      <a
+        href="https://instagram.com/moendemik"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow
+      </a>
+
+    </div>
+
   </footer>
+
 
 </body>
 </html>
