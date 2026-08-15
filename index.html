@@ -8,17 +8,20 @@
 
   <meta
     name="description"
-    content="Mo Endemik Nursery supports the conservation and propagation of Mauritius' native and endemic flora."
+    content="Mo Endemik Nursery supports the propagation and conservation of Mauritius' native and endemic flora."
   >
 
   <style>
     :root {
       --black: #111111;
+
       --green: #294A32;
       --green-dark: #1F3927;
       --green-light: #607363;
+
       --red: #B83A3A;
       --red-dark: #9E3030;
+
       --background: #fafafa;
     }
 
@@ -39,6 +42,7 @@
       flex-direction: column;
 
       font-family: Arial, Helvetica, sans-serif;
+
       color: var(--black);
       background: var(--background);
 
@@ -93,6 +97,7 @@
     nav {
       display: flex;
       align-items: center;
+
       gap: 9px;
     }
 
@@ -104,7 +109,6 @@
       padding: 7px 13px;
 
       color: var(--green);
-
       background: transparent;
 
       text-decoration: none;
@@ -119,6 +123,7 @@
 
     nav a:hover {
       color: var(--green-dark);
+
       transform: translateY(-1px);
     }
 
@@ -157,10 +162,10 @@
     ========================= */
 
     .nursery {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
 
-      padding: 75px 6% 100px;
+      padding: 100px 6% 120px;
 
       text-align: center;
     }
@@ -172,103 +177,86 @@
 
 
     /* =========================
-       TITLE
+       SMALL LABEL
     ========================= */
 
     .nursery-label {
-      margin-bottom: 17px;
+      margin-bottom: 20px;
 
       color: var(--green);
 
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 600;
 
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
+
+    /* =========================
+       TITLE
+    ========================= */
+
     .nursery h1 {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
 
       color: var(--green);
 
-      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-size: clamp(2.5rem, 5vw, 4rem);
       line-height: 1.02;
 
       font-weight: 500;
       letter-spacing: -0.045em;
     }
 
+
+    /* =========================
+       UPPER TEXT
+    ========================= */
+
     .nursery-intro {
-      max-width: 620px;
-      margin: 0 auto 45px;
+      max-width: 540px;
+
+      margin: 0 auto 65px;
 
       color: var(--black);
 
-      font-size: 0.95rem;
-      line-height: 1.7;
+      font-size: 0.9rem;
+      line-height: 1.75;
     }
 
 
     /* =========================
-       IMAGE
+       NURSERY IMAGE
     ========================= */
 
     .nursery-image {
+      display: block;
+
       width: 100%;
       max-width: 820px;
 
-      margin: 0 auto;
-
-      display: block;
-
       height: auto;
 
-      border-radius: 4px;
+      margin: 0 auto;
+
+      border-radius: 3px;
     }
 
 
     /* =========================
-       IMAGE CAPTION
+       LOWER TEXT
     ========================= */
 
     .nursery-caption {
-      max-width: 600px;
+      max-width: 500px;
 
-      margin: 30px auto 0;
+      margin: 45px auto 0;
 
       color: var(--black);
 
       font-size: 0.84rem;
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       BACK HOME
-    ========================= */
-
-    .home-link {
-      display: inline-flex;
-      align-items: center;
-
-      margin-top: 42px;
-
-      color: var(--green);
-
-      text-decoration: none;
-
-      font-size: 0.82rem;
-      font-weight: 600;
-
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .home-link:hover {
-      color: var(--green-dark);
-      transform: translateY(-1px);
+      line-height: 1.75;
     }
 
 
@@ -311,11 +299,13 @@
 
     footer a:hover {
       color: var(--green);
+
       text-decoration: underline;
     }
 
     .footer-separator {
       color: var(--black);
+
       font-size: 0.9rem;
       line-height: 1;
     }
@@ -332,8 +322,12 @@
       }
 
       .nursery {
-        padding-top: 65px;
-        padding-bottom: 85px;
+        padding-top: 80px;
+        padding-bottom: 100px;
+      }
+
+      .nursery-intro {
+        margin-bottom: 55px;
       }
     }
 
@@ -358,12 +352,13 @@
       }
 
       nav {
-        gap: 5px;
+        gap: 4px;
       }
 
       nav a {
-        padding: 6px 9px;
-        font-size: 0.72rem;
+        padding: 6px 8px;
+
+        font-size: 0.7rem;
       }
 
       nav a.donate-link {
@@ -371,31 +366,41 @@
       }
 
       .nursery {
-        padding: 48px 5% 65px;
+        padding: 60px 5% 80px;
+      }
+
+      .nursery-label {
+        margin-bottom: 17px;
+
+        font-size: 0.7rem;
       }
 
       .nursery h1 {
+        margin-bottom: 20px;
+
         font-size: clamp(2.3rem, 11vw, 3.3rem);
       }
 
       .nursery-intro {
         max-width: 340px;
 
-        margin-bottom: 35px;
+        margin-bottom: 42px;
 
-        font-size: 0.87rem;
+        font-size: 0.84rem;
+        line-height: 1.7;
+      }
+
+      .nursery-image {
+        width: 100%;
       }
 
       .nursery-caption {
-        max-width: 340px;
+        max-width: 330px;
 
-        margin-top: 25px;
+        margin-top: 30px;
 
-        font-size: 0.8rem;
-      }
-
-      .home-link {
-        margin-top: 35px;
+        font-size: 0.78rem;
+        line-height: 1.7;
       }
 
       footer {
@@ -423,12 +428,12 @@
 
     <nav>
 
-      <a href="https://moendemik.org/our-plants.html">
-        Our Plants
-      </a>
-
       <a href="https://moendemik.org/about.html">
         About
+      </a>
+
+      <a href="https://moendemik.org/our-plants.html">
+        Our Plants
       </a>
 
       <a
@@ -454,35 +459,26 @@
         </div>
 
         <h1>
-          Growing our native heritage.
+          Growing Mauritius' native flora.
         </h1>
 
         <p class="nursery-intro">
-          Our nursery supports the propagation of Mauritius'
-          native and endemic plants, helping make these species
-          more accessible for conservation and appreciation.
+          A place dedicated to the propagation and care of
+          native and endemic plants.
         </p>
 
 
         <img
           class="nursery-image"
           src="nursery.jpeg"
-          alt="Mo Endemik nursery with native and endemic plants"
+          alt="Mo Endemik nursery"
         >
 
 
         <p class="nursery-caption">
-          A place for native plants to grow, be cared for,
-          and contribute to the future of Mauritius' botanical heritage.
+          Plants grown here contribute to the conservation
+          and continued appreciation of Mauritius' botanical heritage.
         </p>
-
-
-        <a
-          class="home-link"
-          href="https://moendemik.org"
-        >
-          ← Back to Home
-        </a>
 
       </div>
 
