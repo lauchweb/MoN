@@ -190,14 +190,18 @@
     ========================= */
 
     .home-link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-
-      width: fit-content;
+      justify-content: center;
 
       margin-top: 45px;
 
-      color: var(--green);
+      padding: 10px 19px;
+
+      color: #ffffff;
+      background: var(--green);
+
+      border-radius: 24px;
 
       text-decoration: none;
 
@@ -205,12 +209,13 @@
       font-weight: 600;
 
       transition:
-        color 0.2s ease,
+        background 0.2s ease,
         transform 0.2s ease;
     }
 
     .home-link:hover {
-      color: var(--green-dark);
+      color: #ffffff;
+      background: var(--green-dark);
       transform: translateY(-1px);
     }
 
@@ -321,6 +326,10 @@
         font-size: 0.84rem;
       }
 
+      .home-link {
+        margin-top: 40px;
+      }
+
       footer {
         padding: 22px 5%;
 
@@ -353,11 +362,11 @@
       <div class="plants-inner">
 
         <h1 class="plants-title">
-          Native &amp; Endemic
+          Botanical Selection
         </h1>
 
         <p class="plants-intro">
-          Our nursery focuses on native and endemic plants and they are
+          Our nursery focuses on native and endemic plants that are
           well suited to Mauritius and its local conditions.
         </p>
 
@@ -374,7 +383,7 @@
         </p>
 
         <a class="home-link" href="https://moendemik.mu/">
-          ← Back to Home
+          Back to Home
         </a>
 
       </div>
