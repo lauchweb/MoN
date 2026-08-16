@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mo Endemik | Terms of Sale</title>
+
+  <meta
+    name="description"
+    content="Terms of Sale for native plants supplied by Mo Endemik."
+  >
+
+  <style>
+    :root {
+      /* =========================
+         FILE 1 MASTER
+      ========================= */
+
+      --black: #171717;
+
+      --title-green: #29443A;
+      --title-green-dark: #20362E;
+
+      --red: #B83A3A;
+      --red-dark: #9E3030;
+
+      --background: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family:
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--black);
+      background: var(--background);
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+
+    /* =========================
+       TERMS
+    ========================= */
+
+    .terms-section {
+      max-width: 900px;
+      margin: 0 auto;
+
+      padding: 100px 6% 110px;
+    }
+
+    .terms-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    .terms-title {
+      margin-bottom: 38px;
+
+      color: var(--title-green);
+
+      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+      line-height: 1;
+
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+
+    /* =========================
+       TERMS CONTENT
+    ========================= */
+
+    .terms-content {
+      color: var(--black);
+
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .terms-content section {
+      margin-bottom: 32px;
+    }
+
+
+    /* =========================
+       SECTION HEADINGS
+    ========================= */
+
+    .terms-content h2 {
+      margin-bottom: 9px;
+
+      color: var(--title-green);
+
+      font-size: 1rem;
+      line-height: 1.3;
+
+      font-weight: 600;
+    }
+
+    .terms-content p {
+      color: var(--black);
+    }
+
+    .terms-content a {
+      color: var(--title-green);
+
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .terms-content a:hover {
+      color: var(--title-green-dark);
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       HOME NAVIGATION
+    ========================= */
+
+    .home-navigation {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 18px;
+    }
+
+    .home-arrow {
+      color: var(--title-green);
+
+      font-size: 1.1rem;
+      line-height: 1;
+
+      font-weight: 500;
+    }
+
+    .terms-content a.home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 0;
+      padding: 11px 22px;
+
+      color: #ffffff;
+      background: var(--title-green);
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+      font-weight: 600;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .terms-content a.home-link:hover {
+      color: #ffffff;
+      background: var(--title-green-dark);
+      text-decoration: none;
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      width: 100%;
+
+      flex-shrink: 0;
+
+      padding: 25px 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: transparent;
+      border: none;
+
+      color: var(--black);
+
+      font-size: 0.72rem;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: var(--black);
+
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--title-green);
+      text-decoration: underline;
+    }
+
+    .footer-dot {
+      color: var(--black);
+
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .terms-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .terms-section {
+        padding: 65px 5% 75px;
+      }
+
+      .terms-title {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+
+        margin-bottom: 32px;
+      }
+
+      .terms-content {
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .terms-content section {
+        margin-bottom: 28px;
+      }
+
+      .home-navigation {
+        gap: 8px;
+      }
+
+      .home-arrow {
+        font-size: 1rem;
+      }
+
+      .terms-content a.home-link {
+        padding: 10px 20px;
+
+        font-size: 0.82rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="terms-section">
+
+      <div class="terms-inner">
+
+        <h1 class="terms-title">
+          Terms of Sale
+        </h1>
+
+
+        <div class="terms-content">
+
+          <section>
+            <h2>About these terms</h2>
+
+            <p>
+              These Terms of Sale apply to the purchase of native
+              plants supplied by Mo Endemik. By purchasing plants
+              from us, you acknowledge and agree to these terms.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Plant availability</h2>
+
+            <p>
+              Native plants are offered for sale only when they are
+              available. Availability may vary according to
+              propagation, growth, season, stock levels and the
+              condition of individual plants. The availability of
+              a particular plant is therefore not guaranteed until
+              the purchase has been confirmed by Mo Endemik.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Prices and payment</h2>
+
+            <p>
+              Prices applicable to native plants are those
+              communicated by Mo Endemik at the time of purchase.
+              Full payment must be received before the purchased
+              plants can be collected.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Collection</h2>
+
+            <p>
+              Plants are available for collection by the customer
+              from the designated Mo Endemik nursery or collection
+              location. Collection will only take place once full
+              payment has been received and the purchase has been
+              confirmed.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Collection timeframe</h2>
+
+            <p>
+              Customers must collect their plants within the
+              timeframe communicated by Mo Endemik at the time of
+              purchase. Customers should contact us as soon as
+              possible if they are unable to collect within the
+              agreed timeframe.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Living plants and natural variation</h2>
+
+            <p>
+              Plants are living organisms and may naturally vary
+              in size, shape, colour, appearance and condition.
+              Minor variations are an inherent characteristic of
+              living plants and do not necessarily indicate a
+              defect. Customers are encouraged to inspect plants
+              before collection and to raise any concerns with us
+              before taking them away.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>No returns or exchanges</h2>
+
+            <p>
+              Due to the living and perishable nature of plants,
+              Mo Endemik does not accept returns or exchanges after
+              a plant has been collected by the customer. Customers
+              should carefully consider their purchase and inspect
+              the plant at the time of collection before taking it
+              away. This policy does not exclude or limit any rights
+              or remedies that may apply under applicable consumer
+              protection law.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Care after collection</h2>
+
+            <p>
+              Once a plant has been collected, the customer is
+              responsible for its transport, handling, planting
+              and ongoing care. Mo Endemik cannot be responsible
+              for deterioration, damage or loss resulting from
+              unsuitable transport, handling, planting conditions,
+              watering, environmental conditions, pests, disease
+              or other circumstances occurring after collection.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Cancellations and refunds</h2>
+
+            <p>
+              Any request to cancel a purchase before collection
+              should be made as soon as possible. Where a refund
+              is applicable, it will be handled in accordance with
+              these Terms of Sale and applicable law. No refund or
+              exchange is provided simply because a customer
+              changes their mind after collecting a plant, subject
+              to any rights that cannot lawfully be excluded.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Questions about a purchase</h2>
+
+            <p>
+              If you have a question about plant availability,
+              payment, collection or a purchase, please
+              <a
+                href="mailto:policy@moendemik.org"
+                style="text-decoration: underline;"
+              >contact us</a>.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Privacy</h2>
+
+            <p>
+              Personal information provided in connection with a
+              purchase is handled in accordance with our
+              <a
+                href="privacy-policy.html"
+                style="text-decoration: underline;"
+              >Privacy Policy</a>.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Changes to these terms</h2>
+
+            <p>
+              These Terms of Sale may be updated from time to time
+              to reflect changes in our activities, services or
+              applicable requirements. Any changes will be reflected
+              on this page.
+            </p>
+          </section>
+
+
+          <div class="home-navigation">
+
+            <span class="home-arrow">←</span>
+
+            <a class="home-link" href="https://moendemik.mu/">
+              Back to Home
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      Conservation &amp; Propagation © Mo Endemik 2025-2026
+    </span>
+
+    <div class="footer-links">
+
+     <a href="https://moendemik.org/privacy-policy.html">
+        Privacy Policy
+      </a>
+
+      <span class="footer-dot">•</span>
+
+      <a href="terms-of-sale.html">
+        Terms of Sale
+      </a>
+
+      <span class="footer-dot">•</span>
+
+      <a href="https://instagram.com/moendemik">
+        Follow
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
