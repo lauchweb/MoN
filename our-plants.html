@@ -214,6 +214,30 @@
 
 
     /* =========================
+       TERMS OF SALE
+    ========================= */
+
+    .terms-link {
+      display: inline-block;
+
+      margin-top: 12px;
+
+      color: var(--title-green);
+
+      font-size: 0.82rem;
+      font-weight: 600;
+
+      text-decoration: underline;
+
+      transition: color 0.2s ease;
+    }
+
+    .terms-link:hover {
+      color: var(--title-green-dark);
+    }
+
+
+    /* =========================
        HOME NAVIGATION
        Arrow outside green button
     ========================= */
@@ -379,6 +403,10 @@
         line-height: 1.6;
       }
 
+      .terms-link {
+        font-size: 0.82rem;
+      }
+
       .home-navigation {
         gap: 8px;
 
@@ -447,15 +475,22 @@
         </p>
 
         <p class="plants-contact">
-          From time to time, plants from our propagation work may
-          become available when quantities allow. Availability
-          depends on the species being propagated and the plants
-          that are ready for distribution. If you would like to
-          enquire about plants currently available,
+          Plants are offered for sale only when they are available
+          from our nursery. Availability depends on the species
+          being propagated and the plants that are ready for
+          distribution. If you would like to enquire about plants
+          currently available, please
           <a href="mailto:plant@moendemik.mu">
             contact us
           </a>.
         </p>
+
+        <a
+          class="terms-link"
+          href="terms-of-sale.html"
+        >
+          Terms of Sale
+        </a>
 
 
         <div class="home-navigation">
