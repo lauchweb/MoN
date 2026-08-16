@@ -239,19 +239,18 @@
 
     /* =========================
        HOME NAVIGATION
-       Arrow vertically aligned
-       with the beginning of H1
+       POSITION ONLY
     ========================= */
 
     .home-navigation {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 10px;
 
-      width: 100%;
+      width: max-content;
 
       margin-top: 45px;
+      margin-left: calc(50% - 310px);
     }
 
     .home-arrow {
@@ -415,6 +414,7 @@
         gap: 8px;
 
         margin-top: 40px;
+        margin-left: 0;
       }
 
       .home-arrow {
